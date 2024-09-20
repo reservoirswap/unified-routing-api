@@ -16,10 +16,13 @@ export class Permit2Fetcher {
     this.permit2Abi = PERMIT2_CONTRACT.abi;
     const permit2 = new ethers.Contract(permit2Address(), this.permit2Abi);
     const permit2ZkSync = new ethers.Contract(permit2Address(ChainId.ZKSYNC), this.permit2Abi);
+    const permit2Abstract = new ethers.Contract(permit2Address(ChainId.ABSTRACT_TESTNET), this.permit2Abi);
     this.chainIdPermit2Map = new Map<ChainId, ethers.Contract>();
     this.chainIdRpcMap.forEach((_, chainId) => {
       if (chainId === ChainId.ZKSYNC) {
         this.chainIdPermit2Map.set(chainId, permit2ZkSync);
+      } else if(chainId === ChainId.ABSTRACT_TESTNET){
+        this.chainIdPermit2Map.set(chainId, permit2Abstract);
       } else {
         this.chainIdPermit2Map.set(chainId, permit2);
       }

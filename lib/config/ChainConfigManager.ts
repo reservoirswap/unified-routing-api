@@ -188,6 +188,12 @@ export abstract class ChainConfigManager {
       },
       alarmEnabled: false,
     },
+    [ChainId.ABSTRACT_TESTNET]: {
+      routingTypes: {
+        [RoutingType.CLASSIC]: {},
+      },
+      alarmEnabled: false,
+    },
   };
 
   private static _performedDependencyCheck = false;

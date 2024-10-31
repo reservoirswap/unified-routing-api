@@ -33,6 +33,7 @@ import {
   USDT_OPTIMISM,
   WRAPPED_NATIVE_CURRENCY,
   USDC_ABSTRACT_TESTNET,
+  USDC_ZERO
 } from '@uniswap/smart-order-router';
 import { BigNumber, ethers } from 'ethers';
 import NodeCache from 'node-cache';
@@ -207,6 +208,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDCE_ZKSYNC;
     case ChainId.ABSTRACT_TESTNET:
       return USDC_ABSTRACT_TESTNET;
+    case ChainId.ZERO:
+      return USDC_ZERO;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

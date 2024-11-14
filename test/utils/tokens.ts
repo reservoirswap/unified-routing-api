@@ -13,11 +13,14 @@ import {
   DAI_POLYGON_MUMBAI,
   DAI_SEPOLIA,
   NodeJSCache,
+  USDCE_ZKSYNC,
+  USDC_ABSTRACT_TESTNET,
   USDC_ARBITRUM,
   USDC_AVAX,
   USDC_BASE,
   USDC_BASE_GOERLI,
   USDC_BNB,
+  USDC_BOB,
   USDC_GOERLI,
   USDC_MAINNET,
   USDC_OPTIMISM,
@@ -25,15 +28,13 @@ import {
   USDC_POLYGON,
   USDC_POLYGON_MUMBAI,
   USDC_SEPOLIA,
-  USDCE_ZKSYNC,
+  USDC_ZERO,
   USDT_ARBITRUM,
   USDT_BNB,
   USDT_GOERLI,
   USDT_MAINNET,
   USDT_OPTIMISM,
   WRAPPED_NATIVE_CURRENCY,
-  USDC_ABSTRACT_TESTNET,
-  USDC_ZERO
 } from '@uniswap/smart-order-router';
 import { BigNumber, ethers } from 'ethers';
 import NodeCache from 'node-cache';
@@ -210,6 +211,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_ABSTRACT_TESTNET;
     case ChainId.ZERO:
       return USDC_ZERO;
+    case ChainId.BOB:
+      return USDC_BOB;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

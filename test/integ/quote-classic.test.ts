@@ -460,6 +460,7 @@ describe('quote', function () {
     [ChainId.ABSTRACT_TESTNET]: USDC_ON(ChainId.ABSTRACT_TESTNET),
     [ChainId.ZERO]: USDC_ON(ChainId.ZERO),
     [ChainId.BOB]: USDC_ON(ChainId.BOB),
+    [ChainId.CYBER]: USDC_ON(ChainId.CYBER),
   };
 
   const TEST_ERC20_2: { [chainId in ChainId]: Token | null } = {
@@ -490,6 +491,7 @@ describe('quote', function () {
     [ChainId.ABSTRACT_TESTNET]: WNATIVE_ON(ChainId.ABSTRACT_TESTNET),
     [ChainId.ZERO]: WNATIVE_ON(ChainId.ZERO),
     [ChainId.BOB]: WNATIVE_ON(ChainId.BOB),
+    [ChainId.CYBER]: WNATIVE_ON(ChainId.CYBER),
   };
 
   // TODO: Find valid pools/tokens on optimistic kovan and polygon mumbai. We skip those tests for now.

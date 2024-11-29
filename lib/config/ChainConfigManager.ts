@@ -206,6 +206,12 @@ export abstract class ChainConfigManager {
       },
       alarmEnabled: false,
     },
+    [ChainId.CYBER]: {
+      routingTypes: {
+        [RoutingType.CLASSIC]: {},
+      },
+      alarmEnabled: false,
+    },
   };
 
   private static _performedDependencyCheck = false;

@@ -21,6 +21,7 @@ export class Permit2Fetcher {
     const permit2Bob = new ethers.Contract(permit2Address(ChainId.BOB), this.permit2Abi);
     const permit2Cyber = new ethers.Contract(permit2Address(ChainId.CYBER), this.permit2Abi);
     const permit2Shape = new ethers.Contract(permit2Address(ChainId.SHAPE), this.permit2Abi);
+    const permit2Ink = new ethers.Contract(permit2Address(ChainId.INK), this.permit2Abi);
     this.chainIdPermit2Map = new Map<ChainId, ethers.Contract>();
     this.chainIdRpcMap.forEach((_, chainId) => {
       if (chainId === ChainId.ZKSYNC) {
@@ -35,6 +36,8 @@ export class Permit2Fetcher {
         this.chainIdPermit2Map.set(chainId, permit2Cyber);
       } else if (chainId === ChainId.SHAPE) {
         this.chainIdPermit2Map.set(chainId, permit2Shape);
+      } else if (chainId === ChainId.INK) {
+        this.chainIdPermit2Map.set(chainId, permit2Ink);
       } else {
         this.chainIdPermit2Map.set(chainId, permit2);
       }

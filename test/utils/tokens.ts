@@ -23,6 +23,7 @@ import {
   USDC_BOB,
   USDC_CYBER,
   USDC_GOERLI,
+  USDC_INK,
   USDC_MAINNET,
   USDC_OPTIMISM,
   USDC_OPTIMISM_GOERLI,
@@ -219,6 +220,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_CYBER;
     case ChainId.SHAPE:
       return USDC_SHAPE;
+    case ChainId.INK:
+      return USDC_INK;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

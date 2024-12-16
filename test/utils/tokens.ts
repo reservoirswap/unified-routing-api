@@ -29,6 +29,8 @@ import {
   USDC_OPTIMISM_GOERLI,
   USDC_POLYGON,
   USDC_POLYGON_MUMBAI,
+  USDC_REDSTONE,
+  USDC_REDSTONE_GARNET,
   USDC_SEPOLIA,
   USDC_SHAPE,
   USDC_ZERO,
@@ -222,6 +224,10 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_SHAPE;
     case ChainId.INK:
       return USDC_INK;
+    case ChainId.REDSTONE:
+      return USDC_REDSTONE;
+    case ChainId.REDSTONE_GARNET:
+      return USDC_REDSTONE_GARNET;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

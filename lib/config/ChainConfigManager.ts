@@ -224,6 +224,18 @@ export abstract class ChainConfigManager {
       },
       alarmEnabled: false,
     },
+    [ChainId.REDSTONE]: {
+      routingTypes: {
+        [RoutingType.CLASSIC]: {},
+      },
+      alarmEnabled: false,
+    },
+    [ChainId.REDSTONE_GARNET]: {
+      routingTypes: {
+        [RoutingType.CLASSIC]: {},
+      },
+      alarmEnabled: false,
+    },
   };
 
   private static _performedDependencyCheck = false;

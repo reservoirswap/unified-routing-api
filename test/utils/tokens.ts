@@ -16,6 +16,7 @@ import {
   USDCE_ZKSYNC,
   USDC_ABSTRACT_MAINNET,
   USDC_ABSTRACT_TESTNET,
+  USDC_ANIME_TESTNET,
   USDC_ARBITRUM,
   USDC_AVAX,
   USDC_BASE,
@@ -231,6 +232,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_REDSTONE_GARNET;
     case ChainId.ABSTRACT_MAINNET:
       return USDC_ABSTRACT_MAINNET;
+    case ChainId.ANIME_TESTNET:
+      return USDC_ANIME_TESTNET;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

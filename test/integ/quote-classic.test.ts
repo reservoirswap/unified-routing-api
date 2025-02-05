@@ -467,6 +467,7 @@ describe('quote', function () {
     [ChainId.REDSTONE_GARNET]: USDC_ON(ChainId.REDSTONE_GARNET),
     [ChainId.ABSTRACT_MAINNET]: USDC_ON(ChainId.ABSTRACT_MAINNET),
     [ChainId.ANIME_TESTNET]: USDC_ON(ChainId.ANIME_TESTNET),
+    [ChainId.MODE]: USDC_ON(ChainId.MODE),
   };
 
   const TEST_ERC20_2: { [chainId in ChainId]: Token | null } = {
@@ -504,6 +505,7 @@ describe('quote', function () {
     [ChainId.REDSTONE_GARNET]: WNATIVE_ON(ChainId.REDSTONE_GARNET),
     [ChainId.ABSTRACT_MAINNET]: WNATIVE_ON(ChainId.ABSTRACT_MAINNET),
     [ChainId.ANIME_TESTNET]: WNATIVE_ON(ChainId.ANIME_TESTNET),
+    [ChainId.MODE]: WNATIVE_ON(ChainId.MODE),
   };
 
   // TODO: Find valid pools/tokens on optimistic kovan and polygon mumbai. We skip those tests for now.

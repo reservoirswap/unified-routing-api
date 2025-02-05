@@ -27,6 +27,7 @@ import {
   USDC_GOERLI,
   USDC_INK,
   USDC_MAINNET,
+  USDC_MODE,
   USDC_OPTIMISM,
   USDC_OPTIMISM_GOERLI,
   USDC_POLYGON,
@@ -234,6 +235,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_ABSTRACT_MAINNET;
     case ChainId.ANIME_TESTNET:
       return USDC_ANIME_TESTNET;
+    case ChainId.MODE:
+      return USDC_MODE;
     default:
       throw new Error(`Chain id: ${chainId} not supported`);
   }

@@ -56,13 +56,13 @@ export abstract class ChainConfigManager {
           priceBufferBps: 15,
         },
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.OPTIMISM]: {
       routingTypes: {
         [RoutingType.CLASSIC]: {},
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.OPTIMISM_GOERLI]: {
       // TODO: add back optimism GOERLI once we are sure routing api supports it
@@ -80,7 +80,7 @@ export abstract class ChainConfigManager {
           deadlineBufferSecs: 60,
         },
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.ARBITRUM_GOERLI]: {
       routingTypes: {
@@ -97,7 +97,7 @@ export abstract class ChainConfigManager {
         [RoutingType.CLASSIC]: {},
         [RoutingType.DUTCH_LIMIT]: {},
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.POLYGON_MUMBAI]: {
       routingTypes: {
@@ -126,7 +126,7 @@ export abstract class ChainConfigManager {
       routingTypes: {
         [RoutingType.CLASSIC]: {},
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.CELO_ALFAJORES]: {
       routingTypes: {
@@ -138,13 +138,13 @@ export abstract class ChainConfigManager {
       routingTypes: {
         [RoutingType.CLASSIC]: {},
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.AVALANCHE]: {
       routingTypes: {
         [RoutingType.CLASSIC]: {},
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.BASE_GOERLI]: {
       routingTypes: {
@@ -156,13 +156,13 @@ export abstract class ChainConfigManager {
       routingTypes: {
         [RoutingType.CLASSIC]: {},
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.BLAST]: {
       routingTypes: {
         [RoutingType.CLASSIC]: {},
       },
-      alarmEnabled: true,
+      alarmEnabled: false,
     },
     [ChainId.MOONBEAM]: {
       routingTypes: {},
@@ -243,6 +243,12 @@ export abstract class ChainConfigManager {
       alarmEnabled: false,
     },
     [ChainId.ANIME_TESTNET]: {
+      routingTypes: {
+        [RoutingType.CLASSIC]: {},
+      },
+      alarmEnabled: false,
+    },
+    [ChainId.MODE]: {
       routingTypes: {
         [RoutingType.CLASSIC]: {},
       },

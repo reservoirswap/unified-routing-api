@@ -466,6 +466,7 @@ describe('quote', function () {
     [ChainId.REDSTONE]: USDC_ON(ChainId.REDSTONE),
     [ChainId.REDSTONE_GARNET]: USDC_ON(ChainId.REDSTONE_GARNET),
     [ChainId.ABSTRACT_MAINNET]: USDC_ON(ChainId.ABSTRACT_MAINNET),
+    [ChainId.ANIME]: USDC_ON(ChainId.ANIME),
     [ChainId.ANIME_TESTNET]: USDC_ON(ChainId.ANIME_TESTNET),
     [ChainId.MODE]: USDC_ON(ChainId.MODE),
   };
@@ -504,6 +505,7 @@ describe('quote', function () {
     [ChainId.REDSTONE]: WNATIVE_ON(ChainId.REDSTONE),
     [ChainId.REDSTONE_GARNET]: WNATIVE_ON(ChainId.REDSTONE_GARNET),
     [ChainId.ABSTRACT_MAINNET]: WNATIVE_ON(ChainId.ABSTRACT_MAINNET),
+    [ChainId.ANIME]: WNATIVE_ON(ChainId.ANIME),
     [ChainId.ANIME_TESTNET]: WNATIVE_ON(ChainId.ANIME_TESTNET),
     [ChainId.MODE]: WNATIVE_ON(ChainId.MODE),
   };

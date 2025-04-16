@@ -242,6 +242,12 @@ export abstract class ChainConfigManager {
       },
       alarmEnabled: false,
     },
+    [ChainId.ANIME]: {
+      routingTypes: {
+        [RoutingType.CLASSIC]: {},
+      },
+      alarmEnabled: false,
+    },
     [ChainId.ANIME_TESTNET]: {
       routingTypes: {
         [RoutingType.CLASSIC]: {},

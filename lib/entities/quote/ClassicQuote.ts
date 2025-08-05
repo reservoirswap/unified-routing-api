@@ -183,10 +183,22 @@ export class ClassicQuote implements IQuote {
     // and merge it with the bips / recipient from the routing API quoteData
     if (this.quoteData.portionBips === undefined || this.quoteData.portionRecipient === undefined) return undefined;
 
+    let effectiveBips = this.quoteData.portionBips;
+    const portionType = this.request.info.portion?.type ?? PortionType.Flat;
+    if (portionType === PortionType.Regressive) {
+      // For demonstration: reduce fee up to 50% for large amounts (>= 1,000,000 units)
+      // effectiveBips = bips * (1 - min(0.5, amount / 1_000_000))
+      const amount = BigNumber.from(this.quoteData.amount);
+      const million = BigNumber.from(1_000_000);
+      let reductionBps = amount.mul(5000).div(million); // 5000 = 50% in BPS
+      if (reductionBps.gt(5000)) reductionBps = BigNumber.from(5000); // cap at 50%
+      effectiveBips = Math.floor(effectiveBips * (1 - reductionBps.toNumber() / 10000));
+    }
+
     return {
-      bips: this.quoteData.portionBips,
+      bips: effectiveBips,
       recipient: this.quoteData.portionRecipient,
-      type: this.request.info.portion?.type ?? PortionType.Flat,
+      type: portionType,
     };
   }
 

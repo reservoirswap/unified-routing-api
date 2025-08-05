@@ -138,15 +138,21 @@ export class PortionFetcher {
     tokenOutChainId: number,
     tokenOutAddress: string,
     requestSource: RequestSource): Promise<GetPortionResponse> {
-    const bips = process.env.PORTION_BIPS ? parseInt(process.env.PORTION_BIPS, 10) : 5;
-    const recipient = process.env.PORTION_RECIPIENT || "0x583784b0c66E8827Ba965bFc5aFFACfdfd0d7589";
-    return {
-      hasPortion: true,
-      portion: {
-        bips,
-        recipient,
-        type: PortionType.Flat
-      }
-    };
+    if(tokenInChainId === 17069){
+      console.log({tokenInChainId, tokenInAddress, tokenOutAddress, tokenOutChainId, requestSource})
+        const bips = process.env.PORTION_BIPS ? parseInt(process.env.PORTION_BIPS, 10) : 5;
+        const recipient = process.env.PORTION_RECIPIENT || "0x583784b0c66E8827Ba965bFc5aFFACfdfd0d7589";
+        return {
+          hasPortion: true,
+          portion: {
+            bips,
+            recipient,
+            type: PortionType.Flat
+          }
+        };
+    }else{
+      return GET_NO_PORTION_RESPONSE
+    }
+   
   }
 }

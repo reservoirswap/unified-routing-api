@@ -92,7 +92,7 @@ export class QuoteHandler extends APIGLambdaHandler<
 
     const portion = frontendAndUraEnablePortion(request.sendPortionEnabled)
       ? (
-          await portionFetcher.getPortion2(
+          await portionFetcher.getPortion(
             request.tokenInChainId,
             tokenInAddress,
             request.tokenOutChainId,

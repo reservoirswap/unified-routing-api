@@ -62,6 +62,15 @@ export class PortionFetcher {
   ): Promise<GetPortionResponse> {
     metrics.putMetric(`PortionFetcherRequest`, 1);
 
+    log.debug({
+      tokenInChainId: tokenInChainId,
+      tokenInAddress: tokenInAddress,
+      tokenOutChainId: tokenOutChainId,
+      tokenOutAddress: tokenOutAddress,
+      requestSource: requestSource,
+    })
+    
+
     // we check ENABLE_PORTION for every request, so that the update to the lambda env var gets reflected
     // in real time
     if (!uraEnablePortion()) {

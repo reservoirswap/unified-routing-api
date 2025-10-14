@@ -206,7 +206,7 @@ export abstract class ChainConfigManager {
       },
       alarmEnabled: false,
     },
-    [ChainId.CYBER]: {
+    [ChainId.STABLE_TESTNET]: {
       routingTypes: {
         [RoutingType.CLASSIC]: {},
       },

@@ -23,7 +23,6 @@ import {
   USDC_BASE_GOERLI,
   USDC_BNB,
   USDC_BOB,
-  USDC_CYBER,
   USDC_GOERLI,
   USDC_INK,
   USDC_MAINNET,
@@ -42,6 +41,7 @@ import {
   USDT_GOERLI,
   USDT_MAINNET,
   USDT_OPTIMISM,
+  USDT_STABLE_TESTNET,
   WRAPPED_NATIVE_CURRENCY,
 } from '@uniswap/smart-order-router';
 import { BigNumber, ethers } from 'ethers';
@@ -221,8 +221,8 @@ export const USDC_ON = (chainId: ChainId): Token => {
       return USDC_ZERO;
     case ChainId.BOB:
       return USDC_BOB;
-    case ChainId.CYBER:
-      return USDC_CYBER;
+    case ChainId.STABLE_TESTNET:
+      return USDT_STABLE_TESTNET;
     case ChainId.SHAPE:
       return USDC_SHAPE;
     case ChainId.INK:

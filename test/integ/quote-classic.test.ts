@@ -460,7 +460,7 @@ describe('quote', function () {
     [ChainId.ABSTRACT_TESTNET]: USDC_ON(ChainId.ABSTRACT_TESTNET),
     [ChainId.ZERO]: USDC_ON(ChainId.ZERO),
     [ChainId.BOB]: USDC_ON(ChainId.BOB),
-    [ChainId.CYBER]: USDC_ON(ChainId.CYBER),
+    [ChainId.STABLE_TESTNET]: USDC_ON(ChainId.STABLE_TESTNET),
     [ChainId.SHAPE]: USDC_ON(ChainId.SHAPE),
     [ChainId.INK]: USDC_ON(ChainId.INK),
     [ChainId.REDSTONE]: USDC_ON(ChainId.REDSTONE),
@@ -469,6 +469,7 @@ describe('quote', function () {
     [ChainId.ANIME]: USDC_ON(ChainId.ANIME),
     [ChainId.ANIME_TESTNET]: USDC_ON(ChainId.ANIME_TESTNET),
     [ChainId.MODE]: USDC_ON(ChainId.MODE),
+    [ChainId.CYBER]: USDC_ON(ChainId.CYBER),
   };
 
   const TEST_ERC20_2: { [chainId in ChainId]: Token | null } = {
@@ -508,6 +509,7 @@ describe('quote', function () {
     [ChainId.ANIME]: WNATIVE_ON(ChainId.ANIME),
     [ChainId.ANIME_TESTNET]: WNATIVE_ON(ChainId.ANIME_TESTNET),
     [ChainId.MODE]: WNATIVE_ON(ChainId.MODE),
+    [ChainId.STABLE_TESTNET]: WNATIVE_ON(ChainId.STABLE_TESTNET),
   };
 
   // TODO: Find valid pools/tokens on optimistic kovan and polygon mumbai. We skip those tests for now.
